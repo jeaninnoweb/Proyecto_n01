@@ -34,10 +34,9 @@ class Principal extends CI_Controller {
       //$this->session->userdata('usuariof',$usuario);
         if($ingreso==TRUE)
         {     //Sesion del usuario
-             $usuario_data = array(               
-               'alias' => $ingreso->alias_usuario,
-               'nombre'=>$ingreso->nombre_usuario,
-               'permisos'=>$ingreso->nombre_permisos,
+             $usuario_data = array(      
+               'nombre'=>$ingreso->usuario_nombre,
+               'permisos'=>$ingreso->permiso_nombre,
                'logueado' => TRUE                        
             );       
            

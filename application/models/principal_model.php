@@ -11,9 +11,9 @@ class Principal_model extends CI_Model {
     {
     	            $this->db->select('*');
                     $this->db->from('usuario u');                   
-                     $this->db->join('permisos p', 'p.id_permisos = u.id_permisos');
-                    $this->db->where('u.alias_usuario',$usuario);
-                    $this->db->where('u.password_usuario', $password);
+                     $this->db->join('permiso p', 'p.permiso_id = u.permiso_id');
+                    $this->db->where('u.usuario_nombre',$usuario);
+                    $this->db->where('u.usuario_clave', $password);
                     $query = $this->db->get();
                    
 

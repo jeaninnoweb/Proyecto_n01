@@ -14,11 +14,11 @@
 		</div><!--/.row-->
 		
 		<div class="row">
-			<img src="<?=base_url();?>img/logo.jpg" width="100%">
+			<img src="<?=base_url();?>assets/img/logo.jpg" width="100%">
 		</div><!--/.row-->
 		
 		<div class="row">
-			<img src="<?=base_url();?>img/logo2.jpg" width="100%" height="10%">
+			<img src="<?=base_url();?>assets/img/logo2.jpg" width="100%" height="10%">
 		</div><!--/.row-->
 								
 		

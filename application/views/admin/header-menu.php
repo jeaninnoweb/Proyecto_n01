@@ -1,4 +1,4 @@
-re<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
@@ -10,7 +10,7 @@ re<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 				<a class="navbar-brand" href="#"><span>EMPRESA</span></a>
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<?=$nombre?><span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Mi Perfil</a></li>
 							<li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Configuración</a></li>
@@ -94,21 +94,6 @@ re<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                   <input  id="txtapeu"  placeholder="Apellido" type="text" class="form-control" required>
                 
                   <input  id="txtusu"  placeholder="Usuario" type="text" class="form-control" required>
-                   <input  id="txtcla"  placeholder="Clave" type="text" class="form-control" required>
-                
-                  <select   id="txtrol"  class="form-control" required>
-                                     <option value=""disabled selected style='display:none;'>Rol</option>
-                                        <?php  $rol = $this->principal_model->mostrarrol();            
-                                     
-                                       foreach($rol as $fila)
-                                        {
-                                         ?>      
-                                             <option value="<?=$fila->id_permisos?>"><?=$fila->nombre_permisos?></option>
-
-                                        <?php
-                                        }
-                                       ?>          
-                                  </select>
               
                 
                 
@@ -157,68 +142,7 @@ re<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <a class="remodal-cancel" href="#">Cancel</a>  
 </div>
 
-<div class="remodal" data-remodal-id="modu">
- <br><br><br>
-   
-     <div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <div class="panel-title">
-                   <p style="font-size:33px;"><b>Modificar Usuario</b><p>
-                    </div>
-                    <div class="tools">
-                      <a class="collapse" href="javascript:;"></a>
-                      <a class="config" data-toggle="modal" href="#grid-config"></a>
-                      <a class="reload" href="javascript:;"></a>
-                      <a class="remove" href="javascript:;"></a>
-                    </div>
-                  </div>
-                  <div class="panel-body no-scroll no-padding">
-                   <form method="POST" id="form-login7" class="p-t-15" role="form"  action="return false" onsubmit="return false">
-                    
-                   
-                        
-                <!-- <input type="date"  class="form-control" placeholder="Fecha" id="txtfecha" name="txtfecha" required >  -->
-              
-                <input  id="txtnombreu1" size="45"  placeholder="Nombre" type="text" class="form-control" required>
-                
-                  <input  id="txtapeu1"  placeholder="Apellido" type="text" class="form-control" required>
-                
-                  <input  id="txtusu1"  placeholder="Usuario" type="text" class="form-control" required>
-                   <input  id="txtcla1"  placeholder="Clave" type="text" class="form-control" required>
-                
-                  <select   id="txtrol1"  class="form-control" required>
-                                     <option value=""disabled selected style='display:none;'>Rol</option>
-                                        <?php  $rol = $this->principal_model->mostrarrol();            
-                                     
-                                       foreach($rol as $fila)
-                                        {
-                                         ?>      
-                                             <option value="<?=$fila->id_permisos?>"><?=$fila->nombre_permisos?></option>
 
-                                        <?php
-                                        }
-                                       ?>          
-                                  </select>
-              
-                 <input  id="txtidu1" style="display:none;">
-                
-                     
-                
-                  <button onclick="modificarusuario(document.getElementById('txtnombreu1').value,
-                  document.getElementById('txtapeu1').value,
-                  document.getElementById('txtusu1').value,
-                  document.getElementById('txtcla1').value,
-                  document.getElementById('txtrol1').value,
-                  document.getElementById('txtidu1').value);" class="btn btn-primary btn-block m-t-5">Aceptar</button>
-                  <button  id="cerrar" class="remodal-cancel btn-block" data-dismiss="modal">Cancelar</button>
-                  </form>
-                  </div>
-                </div>
-                                
-                    </div>   
-
-</div>
 <div class="remodal" data-remodal-id="modal5">
  <br><br><br>
    
@@ -283,40 +207,4 @@ re<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                       </table><br><br><br>
                 
 </div>
-<div class="remodal" data-remodal-id="modal4">
-  <h1>Modificar Documento</h1><br><br>
-  
 
-   <form method="POST" id="form-login7" class="p-t-15" role="form"  action="return false" onsubmit="return false">
-                    
-                    <div class="row">                      
-                      <div class="col-sm-12" align="center">                        
-                        <div class="form-group form-group-default">
-                        
-					  		<input type="date"  class="form-control" placeholder="Fecha" id="txtfecha1" name="txtfecham" required > 
-					  	
-					  		<input  id="txtnombre1" size="45" name="txtnombre1" placeholder="Nombre Documento" type="text" class="form-control" required>
-					  		
-					  			<input  id="txtnroex" name="txtnroexp1" placeholder="Nro Expediente" type="text" class="form-control" required>
-					  		
-					  			<input  id="txtasunto1" name="txtasunto1" placeholder="Asunto" type="text" class="form-control" required>
-					  		
-					  			<select   id="txtestado1" name="txtestado1"  class="form-control" required>
-					                           <option value=""disabled selected style='display:none;'>Estado</option>
-					                            <option value="'0'">Inactivo</option>   
-					                            <option value="1">Activo</option>         
-					                        </select>
-					  	
-					  			<input id="txtdestino1" name="txtdestino1" placeholder="Destino de Área" type="text" class="form-control" required>
-					  		
-                        </div>                        
-                     <div id="resultado1"></div>
-                     
-                
-                 
-                  </form>
-                   </div> 
-
-
-                  </div>
-</div>

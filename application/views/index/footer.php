@@ -65,6 +65,22 @@
 		$(window).on('resize', function () {
 		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
 		})
+
+
+		$('#btn-login').click(function(){
+				
+				var usuario=$('#usuario').val(),
+				 password=$('#password').val();
+
+				 $.ajax({
+		                url: "principal/validarlogin",
+		                type: "POST",
+		                data: "usuario="+usuario+"&password="+password,
+		                success: function(resp){
+		                    $('#resultado').html(resp)
+		                }        
+		            });
+			});
 	</script>	
 </body>
 

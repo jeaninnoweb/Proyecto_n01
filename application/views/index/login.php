@@ -15,7 +15,7 @@
 							<div class="form-group">
 								<input class="form-control" placeholder="Contraseña" name="password" id="password" type="password" value="">
 							</div>							
-							<button type="submit" class="btn btn-primary btn-cons m-t-10">ENTRAR</button>
+							<button type="submit" id="btn-login" class="btn btn-primary btn-cons m-t-10">ENTRAR</button>
 						</fieldset>
 					</form>
 				</div>
@@ -23,16 +23,6 @@
 		</div><!-- /.col-->
 	</div><!-- /.row -->
 			<script type="text/javascript">
-
-				function Validar(usuario, password)
-		        {            
-		            $.ajax({
-		                url: "principal/validarlogin",
-		                type: "POST",
-		                data: "usuario="+usuario+"&password="+password,
-		                success: function(resp){
-		                    $('#resultado').html(resp)
-		                }        
-		            });
-		        }
+			
+				
 		    </script>
