@@ -9,11 +9,10 @@ class Principal_model extends CI_Model {
 	
 	public function validarlogin($usuario, $password)
     {
-    	            $this->db->select('*');
-                    $this->db->from('usuario u');                   
-                     $this->db->join('permiso p', 'p.permiso_id = u.permiso_id');
-                    $this->db->where('u.usuario_nombre',$usuario);
-                    $this->db->where('u.usuario_clave', $password);
+    	              $this->db->select('*');
+                    $this->db->from('persona');  
+                    $this->db->where('persona_login',$usuario);
+                    $this->db->where('persona_clave', $password);
                     $query = $this->db->get();
                    
 

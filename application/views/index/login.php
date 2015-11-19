@@ -1,4 +1,4 @@
-<body style="background-image: url(assets/img/oficina.jpg); background-size: 100%;" background-image="url(assets/img/logo2.jpg)">
+<body style="background-image: url(assets/img/fondo_2.jpg); background-size: 100%;" background-image="url(assets/img/fondo_2.jpg)">
 <br><br><br><br><br>
 	<div class="row">
 <img src=>

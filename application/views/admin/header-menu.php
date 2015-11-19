@@ -10,7 +10,7 @@
 				<a class="navbar-brand" href="#"><span>EMPRESA</span></a>
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;<?=$nombre?>&nbsp;<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Mi Perfil</a></li>
 							<li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Configuración</a></li>
@@ -34,7 +34,7 @@
 			
 			
 		</ul>
-		<div class="attribution">Empresa Coperyght Nvo Chimbote-2015 <a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">Medialoot</a></div>
+		<div class="attribution">Empresa Coperyght Nvo Chimbote-2015 <a href="">Medialoot</a></div>
 	</div><!--/.sidebar-->
 
 <div class="remodal" data-remodal-id="modal">
@@ -47,23 +47,22 @@
                       <div class="col-sm-12" align="center">                        
                         <div class="form-group form-group-default">
                         
-					  		<input type="date"  class="form-control" placeholder="Fecha" id="txtfecha" name="txtfecha" required > 
+					  		<input type="date"  class="form-control" placeholder="Fecha" id="txtfecha" name="txtfecha" required > 					  	
+					  		<input  id="txtnombre" size="45" name="txtnombre" placeholder="Sigla" type="text" class="form-control" required>					  		
+					  		<input  id="txtnroexp" name="txtnroexp" placeholder="Asunto" type="text" class="form-control" required>					  		
+                <input  id="txtasunto" name="txtasunto" placeholder="Folio" type="text" class="form-control" required>  
+                <input  id="txtasunto" name="txtasunto" placeholder="Interesado" type="text" class="form-control" required> 
+                <input  id="txtasunto" name="txtasunto" placeholder="Empresa" type="text" class="form-control" required>  
 					  	
-					  		<input  id="txtnombre" size="45" name="txtnombre" placeholder="Nombre Documento" type="text" class="form-control" required>
-					  		
-					  			<input  id="txtnroexp" name="txtnroexp" placeholder="Nro Expediente" type="text" class="form-control" required>
-					  		
-					  			<input  id="txtasunto" name="txtasunto" placeholder="Asunto" type="text" class="form-control" required>
-					  		
+
 					  			<select   id="txtestado" name="txtestado"  class="form-control" required>
-					                           <option value=""disabled selected style='display:none;'>Estado</option>
-					                            <option value="'0'">Inactivo</option>   
-					                            <option value="1">Activo</option>         
-					                        </select>
-					  	
-					  			<input id="txtdestino" name="txtdestino" placeholder="Destino de Área" type="text" class="form-control" required>
-					  		
-                        </div>                        
+					                           <option value=""disabled selected style='display:none;'>Prioridad</option>
+					                            <option value="'0'">Alto</option>   
+                                      <option value="1">Medio</option>         
+					                            <option value="1">Bajo</option>         
+					                        </select>					  	
+					  		<!-- 	<input id="txtdestino" name="txtdestino" placeholder="Destino de Área" type="text" class="form-control" required> -->					  		
+                  </div>                        
                      
                 
                   <button onclick="grabardocumento(document.getElementById('txtfecha').value,

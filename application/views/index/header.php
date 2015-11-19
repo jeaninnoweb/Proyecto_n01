@@ -21,9 +21,9 @@
 <script src="js/respond.min.js"></script>
 <![endif]-->
 <script type="text/javascript">
-  if(history.forward(1)){
-    location.replace( history.forward(1) );
-  }
+  // if(history.forward(1)){
+  //   location.replace( history.forward(1) );
+  // }
 </script>
 <script type="text/javascript">
 

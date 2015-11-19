@@ -34,37 +34,21 @@
 						        <th >Opción</th>
 						    </tr>
 						    </thead>
-						    <?php
-						    $consulta = $this->principal_model->consultausuario();
-               
-            if($consulta==TRUE){
-            foreach($consulta as $fila)
-                
-            {
-              $idu=$fila->id_usuario;
-              $nomu=$fila->nombre_usuario;
-              $apeu=$fila->apellido_usuario;
-              $alias=$fila->alias_usuario;
-              $clave=$fila->password_usuario;
-              $idperm=$fila->id_permisos;
-              $permi=$fila->nombre_permisos;                    
-           
-             
-              ?>
+						   
 						    <tr>
-						    	<td align="center"><?=$idu?></td>
-						    	<td ><?=$nomu?></td>
-						    	<td id="dd"><?=$apeu?></td>
-						    	<td><?=$alias?></td> 
-						    	<td><?=$clave?></td>
-						    	<td><?=$permi?></td>						    						    	
-						    	<td><center><a   id="editard" href="#modu" onclick="modu(this);" title="Editar" data-idu="<?=$idu?>"
-						    	data-nomu="<?=$nomu?>" data-apeu="<?=$apeu?>" data-alias="<?=$alias?>" data-clave="<?=$clave?>" data-idperm="<?=$idperm?>"><span style="font-size:20px; color:#30a5ff;" class="glyphicon glyphicon-edit"></span></a>
-						    	<a  data-idu="<?=$idu?>" onclick="borraru(this);" title="Borrar" href="#borraru"><span style="font-size:20px; color:#30a5ff;" class="glyphicon glyphicon-remove"></span></a>
+						    	<td align="center"></td>
+						    	<td ></td>
+						    	<td id="dd"></td>
+						    	<td></td> 
+						    	<td></td>
+						    	<td></td>						    						    	
+						    	<td><center><a   id="editard" href="#modu" onclick="modu(this);" title="Editar" data-idu=""
+						    	data-nomu="" data-apeu="" data-alias="" data-clave="" data-idperm=""><span style="font-size:20px; color:#30a5ff;" class="glyphicon glyphicon-edit"></span></a>
+						    	<a  data-idu="" onclick="borraru(this);" title="Borrar" href="#borraru"><span style="font-size:20px; color:#30a5ff;" class="glyphicon glyphicon-remove"></span></a>
 						    	</center></td>
 						    </tr>
 
-						    <?php } }?>
+						    
 						</table>
 					</div>
 				</div>

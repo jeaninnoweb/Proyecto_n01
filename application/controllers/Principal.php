@@ -35,8 +35,8 @@ class Principal extends CI_Controller {
         if($ingreso==TRUE)
         {     //Sesion del usuario
              $usuario_data = array(      
-               'nombre'=>$ingreso->usuario_nombre,
-               'permisos'=>$ingreso->permiso_nombre,
+               'nombre'=>$ingreso->persona_nombre,
+               'persona_id'=>$ingreso->persona_id,
                'logueado' => TRUE                        
             );       
            
@@ -63,32 +63,24 @@ class Principal extends CI_Controller {
    {
     if($this->session->userdata('logueado'))
     {
-        $permisos=$this->session->userdata('permisos');
-        //$contabilidad=$this->session->userdata('contabilidad');
+      
+      $nombree = $this->session->userdata('nombre');
 
-      if($permisos=='Administrador')
-        {
-              $nombree = $this->session->userdata('nombre');
+      $data = array(
+      'nombre'=>$nombree
+      ); 
 
-              $data = array(
-              'nombre'=>$nombree
-              ); 
+      $this->load->view('index/header',$data);
+      $this->load->view('admin/header-menu');
+      if(isset($_GET['documentos'])){
 
-              $this->load->view('index/header',$data);
-              $this->load->view('admin/header-menu');
-              if(isset($_GET['documentos'])){
+         $this->load->view('admin/documentos');
 
-                 $this->load->view('admin/documentos');
-
-              }else{
-                $this->load->view('admin/index');
-              }           
-              
-              $this->load->view('index/footer');
-
-        }
-
-    
+      }else{
+        $this->load->view('admin/index');
+      }           
+      
+      $this->load->view('index/footer');    
    } 
  }
    
@@ -280,8 +272,8 @@ class Principal extends CI_Controller {
         $nombree = $this->session->userdata('nombre');
 
               $data = array(
-              'nombre'=>$nombree,
-              'consulta'=>$this->principal_model->reporteg()
+              'nombre'=>$nombree
+              // 'consulta'=>$this->principal_model->reporteg()
               ); 
 
               $this->load->view('index/header',$data);
