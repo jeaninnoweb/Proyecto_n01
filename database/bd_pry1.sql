@@ -4,20 +4,20 @@ Navicat MySQL Data Transfer
 Source Server         : Jeancarlos
 Source Server Version : 50621
 Source Host           : localhost:3306
-Source Database       : mydb
+Source Database       : bd_pry1
 
 Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2015-10-29 21:41:39
+Date: 2015-11-23 00:45:23
 */
+DROP DATABASE IF EXISTS `bd_pry1`;
+CREATE DATABASE IF NOT EXISTS `bd_pry1` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `bd_pry1`; 
 
 SET FOREIGN_KEY_CHECKS=0;
 
-DROP DATABASE IF EXISTS `bd_pry1`;
-CREATE DATABASE IF NOT EXISTS `bd_pry1` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `bd_pry1`;
 -- ----------------------------
 -- Table structure for archivador
 -- ----------------------------
@@ -160,6 +160,10 @@ CREATE TABLE `detalle_arc_mov` (
 -- ----------------------------
 -- Records of detalle_arc_mov
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for documento
+-- ----------------------------
 DROP TABLE IF EXISTS `documento`;
 CREATE TABLE `documento` (
   `documento_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -172,12 +176,17 @@ CREATE TABLE `documento` (
   `documento_tipoper` varchar(8) NOT NULL,
   `documento_interesado` varchar(50) NOT NULL,
   `documento_empresa` varchar(50) NOT NULL,
-  `documento_cargo` varchar(50) NOT NULL,  
-  `documento_prioridad` varchar(10) NOT NULL ,
-  PRIMARY KEY (`documento_id`) 
-  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `documento_cargo` varchar(50) NOT NULL,
+  `documento_prioridad` varchar(10) NOT NULL,
+  PRIMARY KEY (`documento_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- ----------------------------
--- Table structure for documento
+-- Records of documento
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for documento2
 -- ----------------------------
 DROP TABLE IF EXISTS `documento2`;
 CREATE TABLE `documento2` (
@@ -204,7 +213,7 @@ CREATE TABLE `documento2` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of documento
+-- Records of documento2
 -- ----------------------------
 
 -- ----------------------------
@@ -268,11 +277,12 @@ CREATE TABLE `persona` (
   `persona_clave` varchar(32) NOT NULL,
   `persona_estado` char(1) NOT NULL,
   PRIMARY KEY (`persona_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of persona
 -- ----------------------------
+INSERT INTO `persona` VALUES ('1', '12345678', 'demo', 'demo', 'de', 'demo', 'demo', '1');
 
 -- ----------------------------
 -- Table structure for procedimiento

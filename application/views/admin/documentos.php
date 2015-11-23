@@ -19,11 +19,11 @@
 					<div class="panel-heading"><table width="100%"><tr><td>Lista de Documentos</td><td align="right"></td></tr></table></div>
 					<div class="panel-body">
 <div id="outer">
-   <a href="#modal" class="btn btn-primary">Registrar Documento</a>
-</div>
-						<table data-toggle="table" data-url="tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+   <a href="#modal" id="btn_modal_documento" class="btn btn-primary">Registrar Documento</a>
+</div><br>
+						<table  id="tabla-documentos" width="100%" class="table table-striped table-bordered" cellspacing="0" width="100%">
 						    <thead >
-						    <tr >
+						    <tr style="background:#30a5ff;height:40px;color:#fff;">
 						   		<!-- th>Estado</th>	
 						   		<th >Fecha de registro</th>
 						   		<th >Fecha limite</th>				
@@ -47,6 +47,7 @@
 
 						    </tr>
 						    </thead>
+						    <tbody></tbody>
 						   
 						</table>
 					</div>

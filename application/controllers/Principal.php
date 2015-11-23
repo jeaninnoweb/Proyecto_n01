@@ -84,30 +84,32 @@ class Principal extends CI_Controller {
    } 
  }
    
- 
+ //_______________________________________________________________________________________________________________________________________________________________  
+    public function listar_documentos()
+    {
+      $listar_documentos=$this->principal_model->listar_documentos();
+      echo json_encode($listar_documentos);
+    }
      public function grabardocumento()
     {
-        if ($this->input->post('txtdestino')) {
+
+
+        if ($this->input->post('txtsigla')) {
 
       //Asignar variables a lo obtenido desde el formulario      
-      $fecha= $this->input->post('txtfecha');
-      $nombredoc= $this->input->post('txtnombre');
-      $nroexp= $this->input->post('txtnroexp');
-      $asunto= $this->input->post('txtasunto');
-      $estado= $this->input->post('txtestado');
-      $destino= $this->input->post('txtdestino');
-
-     $fec=strtotime($fecha);                               
-     $idmes=date('m',  $fec);
+      $txtsigla= $this->input->post('txtsigla');
+      $txtasunto= $this->input->post('txtasunto');
+      $txtfolio= $this->input->post('txtfolio');
+      $txtinteresado= $this->input->post('txtinteresado');
+      $txtprioridad= $this->input->post('txtprioridad');
+ 
       
-     $this->principal_model->grabardocumento($fecha,$nombredoc,$nroexp,$asunto,$estado,$destino,$idmes);      
-       echo '<span>Exito!</span>
-       <script> $("#cerrar").click();
-        location.reload();    </script>'; 
-
-
+     $this->principal_model->grabardocumento($txtsigla,$txtasunto,$txtfolio,$txtinteresado,$txtprioridad);      
+    
       }
     }
+
+ //_______________________________________________________________________________________________________________________________________________________________   
      public function registrarusuario()
     {
         if ($this->input->post('a')) {

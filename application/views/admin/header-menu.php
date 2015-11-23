@@ -41,36 +41,31 @@
   <h1>Registrar Documento</h1><br><br>
   <div id="resultado"></div>
 
-   <form method="POST" id="form-login7" class="p-t-15" role="form"  action="return false" onsubmit="return false">
+   <form method="POST" id="form-documento" class="p-t-15" role="form"  action="return false" onsubmit="return false">
                     
                     <div class="row">                      
                       <div class="col-sm-12" align="center">                        
                         <div class="form-group form-group-default">
                         
-					  		<input type="date"  class="form-control" placeholder="Fecha" id="txtfecha" name="txtfecha" required > 					  	
-					  		<input  id="txtnombre" size="45" name="txtnombre" placeholder="Sigla" type="text" class="form-control" required>					  		
-					  		<input  id="txtnroexp" name="txtnroexp" placeholder="Asunto" type="text" class="form-control" required>					  		
-                <input  id="txtasunto" name="txtasunto" placeholder="Folio" type="text" class="form-control" required>  
-                <input  id="txtasunto" name="txtasunto" placeholder="Interesado" type="text" class="form-control" required> 
-                <input  id="txtasunto" name="txtasunto" placeholder="Empresa" type="text" class="form-control" required>  
+					  		<!-- <input type="date"  class="form-control" placeholder="Fecha" id="txtfecha" name="txtfecha" required > 					  	 -->
+					  		<input  size="45" name="txtsigla" placeholder="Sigla" type="text" class="form-control" required>					  		
+					  		<input name="txtasunto" placeholder="Asunto" type="text" class="form-control" required>					  		
+                <input   name="txtfolio" placeholder="Folio" type="text" class="form-control" required>  
+                <input   name="txtinteresado" placeholder="Interesado" type="text" class="form-control" required> 
+                <input   name="txtempresa" placeholder="Empresa" type="text" class="form-control" required>  
 					  	
 
-					  			<select   id="txtestado" name="txtestado"  class="form-control" required>
+					  			<select   name="txtprioridad"  class="form-control" required>
 					                           <option value=""disabled selected style='display:none;'>Prioridad</option>
-					                            <option value="'0'">Alto</option>   
-                                      <option value="1">Medio</option>         
-					                            <option value="1">Bajo</option>         
+					                            <option value="Alto">Alto</option>   
+                                      <option value="Medio">Medio</option>         
+					                            <option value="Bajo">Bajo</option>         
 					                        </select>					  	
 					  		<!-- 	<input id="txtdestino" name="txtdestino" placeholder="Destino de Área" type="text" class="form-control" required> -->					  		
                   </div>                        
                      
                 
-                  <button onclick="grabardocumento(document.getElementById('txtfecha').value,
-                  document.getElementById('txtnombre').value,
-                  document.getElementById('txtnroexp').value,
-                  document.getElementById('txtasunto').value,
-                  document.getElementById('txtestado').value,
-                  document.getElementById('txtdestino').value);" class="btn btn-primary btn-block m-t-5">Aceptar</button>
+                  <button type="submit" class="btn btn-primary btn-block m-t-5">Aceptar</button>
                   <button  id="cerrar" class="remodal-cancel btn-block" data-dismiss="modal">Cancelar</button>
                   </form>
                    </div> 

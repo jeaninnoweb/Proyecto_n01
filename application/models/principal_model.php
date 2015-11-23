@@ -94,22 +94,39 @@ class Principal_model extends CI_Model {
 
 
   }
-   public function grabardocumento($fecha,$nombredoc,$nroexp,$asunto,$estado,$destino,$idmes)
+  public function listar_documentos()
+  {
+    $this->db->select('*');
+    $this->db->from('documento'); 
+    $query = $this->db->get();
+
+    if ($query->num_rows()>0) 
+    {
+      return $query->result();
+    }
+    else
+    {
+      return false;
+    }   
+  }
+   public function grabardocumento($txtsigla,$txtasunto,$txtfolio,$txtinteresado,$txtprioridad)
     {
                          
                 $data = array(
                   
-                'fecha_documento' => $fecha,
-                'nombre_documento' => $nombredoc,
-                'nroexp_documento' => $nroexp,
-                'asunto_documento' => $asunto,
-                'estado_documento' => $estado,
-                'destino_documento' => $destino,
-                'id_mes' => $idmes
-                
+                'documento_numero' => 1,
+                'documento_fuente' => '--',
+                'documento_fecha' => date('Y-m-d'),
+                'documento_sigla' => $txtsigla,
+                'documento_asunto' => $txtasunto,
+                'documento_folio' => $txtfolio,
+                'documento_tipoper' => '--',
+                'documento_interesado' => $txtinteresado,
+                'documento_empresa' => '--',
+                'documento_cargo' => '--',                
+                'documento_prioridad' => $txtprioridad,             
                 );        
                 $this->db->insert('documento',$data);
-
                
   }
    public function registrarusuario($nomu,$apeu,$usu,$cla,$idrol)

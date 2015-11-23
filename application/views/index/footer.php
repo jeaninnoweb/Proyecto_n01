@@ -6,9 +6,17 @@
 	<script src="<?=base_url();?>assets/js/easypiechart.js"></script>
 	<script src="<?=base_url();?>assets/js/easypiechart-data.js"></script>
 	<script src="<?=base_url();?>assets/js/bootstrap-datepicker.js"></script>
-	<script src="<?=base_url();?>assets/js/bootstrap-table.js"></script>
+
+
+	<script src="<?=base_url();?>assets/js/datatables/media/js/jquery.dataTables.js"></script>
+	<script src="<?=base_url();?>assets/js/datatables/media/js/dataTables.bootstrap.js"></script>
+	<script src="<?=base_url();?>assets/js/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+
   <script type="text/javascript" src="<?=base_url();?>css/dropzone/dropzone.min.js"></script>
 	<script src="<?=base_url();?>assets/js/jquery.remodal.js"></script>
+	<script src="<?=base_url();?>scripts/script_load.js"></script>
+
+
 
 <!-- Events -->
 <script>
