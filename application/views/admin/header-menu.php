@@ -36,7 +36,7 @@
 		</ul>
 		<div class="attribution">Empresa Coperyght Nvo Chimbote-2015 <a href="">Medialoot</a></div>
 	</div><!--/.sidebar-->
-
+ 
 <div class="remodal" data-remodal-id="modal">
   <h1>Registrar Documento</h1><br><br>
   <div id="resultado"></div>
@@ -123,7 +123,7 @@
                   <div class="panel-body no-scroll no-padding">
                      <form action="#" class="dropzone no-margin">
                       <div class="fallback">
-                        <input name="file" type="file" multiple />
+                        <input name="file" id="archivo" type="file" multiple />
                       </div>
                     </form> 
                   </div>
@@ -132,7 +132,7 @@
                     </div> 
   
   <br>
-  <a class="remodal-confirm" href="#">OK</a>
+  <a class="remodal-confirm" id="subir_archivo" href="#">OK</a>
   <a class="remodal-cancel" href="#">Cancel</a>  
 </div>
 

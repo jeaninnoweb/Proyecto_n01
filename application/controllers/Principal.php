@@ -109,6 +109,70 @@ class Principal extends CI_Controller {
       }
     }
 
+      public function enviararchivo()
+  {
+    if(isset($_FILES['archivoc']['tmp_name']))
+    {     
+      $archivo=$_FILES['archivoc']['tmp_name'];
+      $nomarchivo=$_FILES['archivoc']['name'];
+      $ext=pathinfo($nomarchivo);
+      $exte = strtolower($ext['extension']); 
+      $hoy = date("Ymd_His");  
+      $caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"; 
+      $numerodeletras=10;
+      $cadena = "";
+
+      for($i=0;$i<$numerodeletras;$i++)
+      {
+        $cadena .= substr($caracteres,rand(0,strlen($caracteres)),1); 
+      }
+
+      if($exte!='png' ||$exte!='jpg'||$exte!='gif')
+      {
+
+        $nvonomarch=$hoy."_".$cadena.".".$exte;
+        $id= $this->input->post('id');
+       
+        mkdir("assets/archivos/".$id, 0700);
+        $destino="assets/archivos/".$id."/".$nvonomarch;        
+        move_uploaded_file($archivo,$destino);
+
+        switch ($exte) {
+          case 'doc':
+             echo "<div  class='images word'></div><div class='nomarchivo'><a  href='".$destino."''>".$nomarchivo."</a></div>";
+            break;
+          
+           case 'docx':
+             echo "<div  class='images word'></div><div class='nomarchivo'><a  href='".$destino."''>".$nomarchivo."</a></div>";
+            break;
+
+          case 'xlsx':
+             echo "<img src='assets/images/iconos_archivos/excel.png' style='width:15%;margin:0px 5px;'><a  href='".$destino."''>".$nomarchivo."</a>";
+            break;
+
+          case 'pptx':
+             echo "<img src='assets/images/iconos_archivos/power_point.png' style='width:15%;margin:0px 5px;'><a  href='".$destino."''>".$nomarchivo."</a>";
+            break;
+
+          case 'pdf':
+             echo "<img src='assets/images/iconos_archivos/pdf.png' style='width:15%;margin:0px 5px;'><a  href='".$destino."'' target='_blank'>".$nomarchivo."</a>";
+            break;
+
+          case 'rar':
+             echo "<img src='assets/images/iconos_archivos/winrar.ico' style='width:15%;margin:0px 5px;'><a  href='".$destino."''>".$nomarchivo."</a>";
+            break;
+
+          case 'zip':
+             echo "<img src='assets/images/iconos_archivos/winrar.ico' style='width:15%;margin:0px 5px;'><a  href='".$destino."''>".$nomarchivo."</a>";
+            break;
+
+
+        }
+        // echo "<a  href='".$destino."''>".$nomarchivo."</a>";
+      }  
+    }
+  }
+
  //_______________________________________________________________________________________________________________________________________________________________   
      public function registrarusuario()
     {
