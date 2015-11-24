@@ -41,6 +41,15 @@
 $route['default_controller'] = "principal";
 $route['404_override'] = '';
 
+$route['validarlogin'] = "principal/validarlogin";
+$route['inicio'] = "principal/inicio";
+$route['documento'] = "principal/documento";
+$route['grabardocumento'] = "principal/grabardocumento";
+$route['archivo_documento'] = "principal/archivo_documento";
+$route['enviararchivo'] = "principal/enviararchivo";
+$route['listar_documentos'] = "principal/listar_documentos";
+$route['usuario'] = "principal/usuario";
+$route['listar_usuario'] = "principal/listar_usuario";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

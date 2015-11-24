@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost:70/Proyecto_n01/';
+$config['base_url']	= 'http://201.240.164.8:70/proyecto_n01/';
 
 /*
 |--------------------------------------------------------------------------

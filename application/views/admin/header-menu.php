@@ -25,12 +25,11 @@
 		
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">		
 		<ul class="nav menu">
-			<li class="active"><a href="<?=base_url();?>principal/admin"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-		<!-- 	<li><a href="#"><span class="glyphicon glyphicon-th"></span> Ejemplo</a></li> -->
-			
-			<li class=""><a  href="<?=base_url();?>principal/admin?documentos"><span class="glyphicon glyphicon-list"></span> DOCUMENTOS</a></li>
-			<li class=""><a href="<?=base_url();?>principal/reporte"><span class="glyphicon glyphicon-print"></span> REPORTES</a></li>
-			<li class=""><a href="<?=base_url();?>principal/usuario"><span class="glyphicon glyphicon-user"></span> USUARIO</a></li>
+			<li class="active"><a href="inicio"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>			
+      <li class=""><a  href="documento"><span class="glyphicon glyphicon-list"></span> DOCUMENTOS</a></li>      
+			<li class=""><a  href="area"><span class="glyphicon glyphicon-list"></span> AREAS</a></li>			
+			<li class=""><a href="usuario"><span class="glyphicon glyphicon-user"></span> USUARIO</a></li>
+      <li class=""><a href=""><span class="glyphicon glyphicon-print"></span> REPORTES</a></li>
 			
 			
 		</ul>
@@ -195,8 +194,8 @@
                         </tr>
                         <tr align="center" style="font-weight:bold;color:#777;background-color:#f4f4f4;">
                         		     <td >1</td>
-                                     <td >12/04/2015</td>                   
-                                     <td>Nombre de Archivo</td>  
+                                     <td >--</td>                   
+                                     <td id="archivo_docu">Nombre de Archivo</td>  
                                      <td ><a><img src="<?=base_url();?>css/dropzone/images/download.png" width="30px"></a><a><img src="<?=base_url();?>css/dropzone/images/x.png" width="30px"></a></td></tr>
                       </table><br><br><br>
                 

@@ -20,10 +20,10 @@
 					<div class="panel-body">
 <div id="outer">
    <a href="#rusu" class="btn btn-primary">Registrar Usuario</a>
-</div>
-						<table data-toggle="table" data-url="tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+</div><br/>
+						<table  id="tabla-usuario" width="100%" class="table table-striped table-bordered" cellspacing="0" width="100%">
 						    <thead >
-						    <tr >
+						    <tr style="background:#30a5ff;height:40px;color:#fff;">
 					
 						        <th data-field="nrodoc" data-sortable="true">Nro Doc.</th>						       
 						        <th >Nombre</th>
@@ -34,21 +34,6 @@
 						        <th >Opción</th>
 						    </tr>
 						    </thead>
-						   
-						    <tr>
-						    	<td align="center"></td>
-						    	<td ></td>
-						    	<td id="dd"></td>
-						    	<td></td> 
-						    	<td></td>
-						    	<td></td>						    						    	
-						    	<td><center><a   id="editard" href="#modu" onclick="modu(this);" title="Editar" data-idu=""
-						    	data-nomu="" data-apeu="" data-alias="" data-clave="" data-idperm=""><span style="font-size:20px; color:#30a5ff;" class="glyphicon glyphicon-edit"></span></a>
-						    	<a  data-idu="" onclick="borraru(this);" title="Borrar" href="#borraru"><span style="font-size:20px; color:#30a5ff;" class="glyphicon glyphicon-remove"></span></a>
-						    	</center></td>
-						    </tr>
-
-						    
 						</table>
 					</div>
 				</div>

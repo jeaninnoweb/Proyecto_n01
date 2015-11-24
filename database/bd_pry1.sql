@@ -10,11 +10,12 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2015-11-23 00:45:23
+Date: 2015-11-24 14:28:53
 */
 DROP DATABASE IF EXISTS `bd_pry1`;
 CREATE DATABASE IF NOT EXISTS `bd_pry1` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `bd_pry1`; 
+
 
 SET FOREIGN_KEY_CHECKS=0;
 
@@ -178,6 +179,7 @@ CREATE TABLE `documento` (
   `documento_empresa` varchar(50) NOT NULL,
   `documento_cargo` varchar(50) NOT NULL,
   `documento_prioridad` varchar(10) NOT NULL,
+  `documento_archivo` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`documento_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
